@@ -1,0 +1,23 @@
+extends layouts/login-layout.pug
+
+block content 
+    .mainhead 
+        p MuseMosaic
+    .loginContainer
+        img#myVideo(src="/images/bg.jpg", alt="", srcset="")
+        
+        h2 Login 
+        form(method ="post")
+
+            p.errorMessage #{errorMessage}
+            
+            
+            input(type ="text",name="logusername",placeholder ="UserName or Email",value = logusername required = "")
+            input(type ="password",name="logPassword",placeholder="Password",required="")
+            
+
+            
+            input(type ="submit",value ="Login")
+        a(href="/register") Need an account? Register here.
+        .bottomText
+            p This page is protected by reCAPTCHA to ensure you're not a bot

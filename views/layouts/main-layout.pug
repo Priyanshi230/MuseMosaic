@@ -1,0 +1,61 @@
+include ../mixins/mixins
+<!DOCTYPE html> 
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        
+        link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css' integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh' crossorigin='anonymous')
+        link(rel="stylesheet",href ="/css/main.css")
+
+    body
+        
+
+        script.
+            var userLoggedIn = !{userLoggedInJs};
+        .wrapper
+            .row 
+                nav.col-1
+                    a.lav(href ="/")
+                        i.fa-solid.fa-icons
+                    //- a(href="/")
+                    //-     i.fa-solid.fa-house
+                    a(href="/ImageInsight")
+                        i.fa-solid.fa-video
+                    a(href ="/SoundSociety")
+                        i.fa-solid.fa-music
+                    a.search(herf ="/search")
+                        i.fa-solid.fa-magnifying-glass
+                    a(href ="/messages")
+                        i.fa-solid.fa-envelope
+                    a(href ="/profile")
+                        i.fa-solid.fa-user 
+                    a(href = "/logout") 
+                        i.fa-solid.fa-right-from-bracket  
+                    //- col-10 is the width when not midum ans if window size medium col size =8
+                    //- becayse 2 we will have for nav + 8 for mainsection + 2 for third col hence 12
+                    //- sum of all three will alwaays be 12
+                    //- hence lh-6 is done to minimize the mainsection when screen size is large
+                .mainSectionContainer.col-10.col-md-10.col-lg-8
+                    .titleContainer 
+                        h1 #{pageTitle}
+                    block content 
+                //-the devices in which screen is super small and we want to get rid of some col or hide we use display classes
+                //- d-none will hide it from all size of screen 
+                //- d.none.d-md-block will display the block
+                //- col.-lg-4 menas it increases the size of third col to 4 when screen is large
+                .d-none.d-md-block.col-md-2.col.lg-1
+                  
+        script(src='https://kit.fontawesome.com/85404227e2.js' crossorigin='anonymous')
+        script(src='https://kit.fontawesome.com/2b1cb0f7ab.js' crossorigin='anonymous')
+        
+        script(src='https://code.jquery.com/jquery-3.5.1.min.js', integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=', crossorigin='anonymous')
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
+        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', crossorigin='anonymous')
+        
+        block scripts 
+        
+        
+        script(src="/js/common.js")

@@ -1,0 +1,269 @@
+/* :root > is variable in css also can be written as html{}
+  we use this because if ever we need to change the color of the website we just need to chnage at one place
+*/
+:root{
+    
+   
+  /* --lavc: #e0b0ff; */
+  --lavc: #ff8906;
+  /* --mainbordercolor :lavender; */
+
+   /* --mainbordercolor:#7f5af0; */
+   --mainbordercolor: black;
+   
+  --buttonhovercolor: whitesmoke;
+  --spacing:15px;
+  --disablecolor: rgb(255, 240, 248);
+  --text: #fffffe;
+  /* --fotterbutton:  purple; */
+
+}
+/*  (* menas apply to all,important keyword means do not overwrite this so if we give some value below that we will not be able to chnage it )*/
+*{
+    /* background-color: #0f0e17; */
+    outline: none !important;
+    /* background-color: #ff8906; */
+    /* background-color: #FFEA61; */
+    background-color: aliceblue;
+    text-decoration-color: black;
+}
+
+h1{
+    font-size: 19px;
+    font-weight: 800;
+    margin:0;
+    
+}
+nav{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    height:100%;
+}
+
+nav a{
+    padding:10px;
+    font-size:30px;
+    width: 55px;
+    height:55px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: black;
+   }
+
+
+
+nav a:hover{
+    background-color: var(--buttonhovercolor);
+    
+    /* color: var(--lavc); */
+    color: var(--lavc);
+    border-radius: 50%;
+    text-decoration: none;
+    
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+button i,
+button span{
+    pointer-events: none;
+}
+
+nav a.lav{
+    color: black;
+}
+
+nav a.lav:hover{
+    color: #fffffe;
+    color: var(--lavc);
+
+}
+nav a.search:hover{
+    color: #fffffe;
+    color: var(--lavc);
+
+}
+
+
+
+.mainSectionContainer{
+    /* background-color: rgba(0, 0, 0, 0.2);  */
+       /* background-color: #fbd147; */
+    padding: 0px;
+    border-left:2px solid var(--mainbordercolor);
+    border-right: 2px solid var(--mainbordercolor);
+    display: flex;
+    flex-direction: column; 
+
+ 
+
+}
+
+.titleContainer{
+    height: 53px;
+    padding: 0 var(--spacing);
+    display:flex;
+    align-items: center;
+    border-bottom:1px solid var(--mainbordercolor);
+    flex-shrink: 0;
+}
+
+.titleContainer h1{
+    flex: 1;
+}
+
+
+.postFormContainer{
+    display:flex;
+    padding: var(--spacing);
+    border-bottom: 1px solid var(--mainbordercolor);
+    flex-shrink: 0;
+    
+}
+
+.userImageContainer{
+    width: 50px;
+    height: 50px;
+}
+
+.userImageContainer img{
+    width:100%;
+    
+    border-radius: 50%;
+    background-color: white;
+}
+
+.textareaContainer{
+    flex:1;
+    padding-left: var(--spacing);
+}
+
+.textareaContainer textarea{
+    width: 100%;
+    border: none;
+    resize: none;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+#submitPostButton{
+    background-color: #ff8906;
+  background-color: black;
+    color: black;
+    border: none;
+    border-radius: 40px;
+    padding: 7px 15px;
+    color: white;
+
+
+}
+
+#submitPostButton:disabled{
+    /* background-color: #a7c1e7; */
+    background-color: #ff8906;
+   color:black;
+}
+
+
+.post{
+    display:flex;
+    flex-direction: column;
+    padding: var(--spacing);
+    cursor: pointer;
+    border-bottom: 1px solid var(--mainbordercolor);
+    flex-shrink: 0;
+}
+
+.mainContentContainer{
+    flex: 1;
+    display: flex;
+
+}
+
+.postContentContainer{
+    padding-left: var(--spacing);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.username,
+.date{
+    color: black;
+
+}
+
+.displayName{
+    font-weight: bold;
+}
+
+
+.postFooter{
+    display: flex;
+    align-items: center;
+
+}
+
+.postFooter .postButtonContainer{
+    flex: 1;
+    display: flex;
+}
+
+
+.postFooter .postButtonContainer button{
+    padding: 2px 5px;
+
+
+}
+
+
+.header a,
+.header span{
+    padding-right:5px;
+}
+
+
+.postButtonContainer button:hover{
+    /* background-color: var(--buttonhovercolor); */
+    color: var(--lavc);
+    border-radius: 50%;
+}
+
+
+.noresults{
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.postButtonContainer.lavender button.active{
+    /* color: orchid; */
+    color: #ff8906;
+
+}
+
+
+.postButtonContainer.lavender button:hover{
+    color: #ff8906;
+    background-color: lavender;
+
+}
+.postActionContainer{
+    padding-left: 35px;
+    font-size:  13px;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.modal .postFormContainer{
+    border:none;
+    padding: 0;
+    padding-top: var(--spacing);
+    
+}
