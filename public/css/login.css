@@ -103,3 +103,7 @@ input[type="password"] {
     z-index:-1;
     opacity: 0.4;
 }
+
+.loginContainer h2{
+    color: white;
+}
